@@ -1,69 +1,72 @@
-/* Lavender-themed styling */
+/* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f6e6ff;
-    color: #5e4b8b;
+    color: #4a148c;
     text-align: center;
-    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
 }
 
-.dark-mode {
-    background-color: #2e1a47;
-    color: #f8e8ff;
-}
-
+/* Header Styling (Perfect Match to Image) */
 header {
+    background-color: #d1a9ff;  /* Soft lavender */
     padding: 20px;
-    background: #d8b8ff;
-    border-radius: 15px;
-    margin: 10px auto;
+    color: #4a148c;
+    font-size: 1.2em;  /* Reduced to match the image */
+    font-weight: bold;
+    border-radius: 20px;
     width: 80%;
+    margin: 30px auto;  /* Centered with space above */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tagline inside Header */
+header p {
+    font-size: 0.9em;  /* Smaller font for tagline */
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* Section Containers */
+.content-section {
+    background: white;
+    width: 80%;
+    margin: 40px auto;  /* Increased spacing between sections */
+    padding: 20px;
+    border-radius: 15px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #bb88ff;
-    color: white;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+/* Extra spacing at the bottom of the last section */
+.content-section:last-of-type {
+    margin-bottom: 60px;
 }
 
-button:hover {
-    background-color: #a370e2;
+/* Headings Styling */
+.content-section h2 {
+    color: #4a148c; /* Darker Purple */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.content-section h3 {
+    color: #7b1fa2; /* Lighter Purple */
 }
 
-nav ul li {
-    display: inline;
-    margin: 10px;
-}
-
-nav ul li a {
+/* Links */
+a {
+    color: #6200ea;
     text-decoration: none;
-    color: #5e4b8b;
     font-weight: bold;
 }
 
-.hidden {
-    display: none;
+a:hover {
+    text-decoration: underline;
 }
 
-#skillList {
-    list-style: none;
-    padding: 0;
+/* Ensures sections fade in smoothly */
+.content-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-#skillList li {
-    background: #e5ccff;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 15px;
-}
